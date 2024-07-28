@@ -1,4 +1,5 @@
 import { Flex, Heading, HStack, Spacer, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -9,7 +10,9 @@ const NavBar = () => {
         <Text>Home</Text>
         <Text>Get a Playlist</Text>
         <Text>Let's Talk</Text>
-        <Text>About</Text>
+        <Link to="/about">
+          <Text>About</Text>
+        </Link>
       </HStack>
     </Flex>
   );
