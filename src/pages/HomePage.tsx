@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 function HomePage() {
   return (
     <>
-      <NavBar />
       <Heading
         textAlign="right"
         padding={20}
