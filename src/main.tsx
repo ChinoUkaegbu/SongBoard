@@ -4,7 +4,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import App from "./App";
 import "./index.css";
 
-import "@fontsource/bricolage-grotesque/500.css";
+import "@fontsource/poppins/400.css";
 import theme from "./theme";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
