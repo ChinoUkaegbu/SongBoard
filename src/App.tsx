@@ -1,6 +1,12 @@
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 
 function App() {
-  return <Button colorScheme="blue">Button</Button>;
+  return (
+    <Heading textAlign="right" padding={20} fontSize="9vw">
+      find the playlist <br />
+      that matches your <br />
+      vibe
+    </Heading>
+  );
 }
 export default App;
