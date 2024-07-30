@@ -4,6 +4,7 @@ import AboutPage from "./pages/AboutPage";
 import LoginPage from "./pages/LoginPage";
 import DemoPage from "./pages/DemoPage";
 import Layout from "./pages/Layout";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "about", element: <AboutPage /> },
       { path: "demo", element: <DemoPage /> },
+      { path: "privacy-policy", element: <PrivacyPolicyPage /> },
     ],
   },
   { path: "/login", element: <LoginPage /> },
