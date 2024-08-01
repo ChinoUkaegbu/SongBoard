@@ -37,7 +37,8 @@ const PinterestSelections = () => {
     // Define the fetchData function inside the useEffect
     const fetchData = () => {
       axios
-        .get("http://localhost:3000/pinterest/queries/boards")
+        .get("https://songboard-back-end.vercel.app/pinterest/queries/boards")
+        // .get("http://localhost:3000/pinterest/queries/boards")
         .then((response) => {
           setData(response.data);
           // console.log(response.data);
@@ -56,7 +57,10 @@ const PinterestSelections = () => {
     setBoardId(board_id); // Update the board ID state
 
     axios
-      .get(`http://localhost:3000/pinterest/queries/pins?board_id=${board_id}`)
+      .get(
+        `https://songboard-back-end.vercel.app/pinterest/queries/pins?board_id=${board_id}`
+      )
+      // .get(`http://localhost:3000/pinterest/queries/pins?board_id=${board_id}`)
       .then((res) => {
         setImageList(res.data);
         navigate("/playlist", { state: { imageList: res.data } });

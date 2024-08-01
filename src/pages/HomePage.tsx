@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   const redirectToPinterest = () => {
     const clientId = "1501989";
-    const redirectUri = "http://localhost:3000/auth/pinterest/callback"; // backend endpoint
+    const redirectUri =
+      "https://songboard-back-end.vercel.app/auth/pinterest/callback"; // backend endpoint
+    // const redirectUri = "http://localhost:3000/auth/pinterest/callback"; // backend endpoint
     const responseType = "code";
     const scope = "boards:read,pins:read"; // scope
     const authUrl = `https://www.pinterest.com/oauth/?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}&scope=${scope}`;

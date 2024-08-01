@@ -5,7 +5,10 @@ const useDemoLabels = () => {
   return useMutation({
     mutationFn: (imageList: String[]) =>
       axios
-        .post("http://localhost:3000/analyze-image", { imageList })
+        .post("https://songboard-back-end.vercel.app/analyze-image", {
+          imageList,
+        })
+        // .post("http://localhost:3000/analyze-image", { imageList })
         .then((res) => res.data),
 
     onSuccess: (data) => {
