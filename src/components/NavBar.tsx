@@ -1,9 +1,11 @@
-import { Flex, Heading, HStack, Spacer, Text } from "@chakra-ui/react";
+import { Flex, Heading, HStack, Image, Spacer, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import logoVinyl from "../assets/logo-vinyl.svg";
 
 const NavBar = () => {
   return (
     <Flex padding={5}>
+      <Image src={logoVinyl} boxSize={10} />
       <Heading variant="normal">SongBoard</Heading>
       <Spacer />
       <HStack spacing="75px">

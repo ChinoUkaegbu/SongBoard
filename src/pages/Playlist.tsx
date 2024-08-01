@@ -1,4 +1,4 @@
-import { Box, Heading, Spinner, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Spinner, Text, VStack } from "@chakra-ui/react";
 import { useCallback, useEffect, useState } from "react";
 import useDemoLabels from "../hooks/useDemoLabels";
 import _ from "lodash";
@@ -46,8 +46,15 @@ const Playlist = () => {
 
   return (
     <Box padding={5}>
-      {isLoading ? <Spinner /> : null}
-      <Heading fontSize="lg">{"Here's your new playlist :)"}</Heading>
+      {isLoading ? (
+        <Flex>
+          <Text paddingRight={2}>Loading</Text>
+          <Spinner />
+        </Flex>
+      ) : (
+        <Heading fontSize="lg">{"Here's your new playlist :)"}</Heading>
+      )}
+
       <br />
       <VStack paddingLeft={2} paddingRight={2}>
         {songs?.map((song_duo) =>

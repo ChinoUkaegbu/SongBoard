@@ -4,6 +4,7 @@ import {
   Card,
   CardBody,
   CardFooter,
+  Center,
   Heading,
   Image,
   Stack,
@@ -55,21 +56,24 @@ const PinterestSelections = () => {
     setBoardId(board_id); // Update the board ID state
 
     axios
-      .get(`http://localhost:3000/pinterest/queries/pins?board_id=${board_id}`) // Use board_id directly
+      .get(`http://localhost:3000/pinterest/queries/pins?board_id=${board_id}`)
       .then((res) => {
         setImageList(res.data);
-        navigate("/playlist", { state: { imageList: res.data } }); // Pass imageList as res.data
+        navigate("/playlist", { state: { imageList: res.data } });
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        // Optionally handle error here
       });
   };
 
   return (
     <>
-      <Stack padding={2} spacing={4}>
-        <Text>PinterestSelections</Text>
+      <Stack padding={5} paddingTop={2} spacing={4}>
+        <Center backgroundColor="lightgray" borderRadius={5}>
+          <Heading paddingTop={2} paddingBottom={2} fontSize="2xl">
+            Your Boards
+          </Heading>
+        </Center>
         {data?.map((board) => (
           <Card
             direction={{ base: "column", sm: "row" }}
