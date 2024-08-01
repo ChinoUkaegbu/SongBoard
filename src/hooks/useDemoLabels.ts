@@ -5,11 +5,11 @@ const useDemoLabels = () => {
   return useMutation({
     mutationFn: (imageList: String[]) =>
       axios
-        .post("http://localhost:5000/analyze-image", { imageList })
+        .post("http://localhost:3000/analyze-image", { imageList })
         .then((res) => res.data),
 
     onSuccess: (data) => {
-      console.log(data);
+      //   console.log(data);
     },
   });
 };

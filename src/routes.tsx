@@ -6,6 +6,7 @@ import DemoPage from "./pages/DemoPage";
 import Layout from "./pages/Layout";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import PinterestSelectionsPage from "./pages/PinterestSelectionsPage";
+import Playlist from "./pages/Playlist";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: "demo", element: <DemoPage /> },
       { path: "privacy-policy", element: <PrivacyPolicyPage /> },
       { path: "pinterest-select", element: <PinterestSelectionsPage /> },
+      { path: "playlist", element: <Playlist /> },
     ],
   },
   { path: "/login", element: <LoginPage /> },
