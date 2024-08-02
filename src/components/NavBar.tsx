@@ -15,7 +15,9 @@ const NavBar = () => {
         <Link to="/demo">
           <Text>{"Get a Playlist (Demo)"}</Text>
         </Link>
-        <Text>Let's Talk</Text>
+        <Link to="/contact">
+          <Text>Let's Talk</Text>
+        </Link>
         <Link to="/about">
           <Text>About</Text>
         </Link>

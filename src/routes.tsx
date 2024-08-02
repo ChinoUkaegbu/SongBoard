@@ -7,6 +7,7 @@ import Layout from "./pages/Layout";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import PinterestSelectionsPage from "./pages/PinterestSelectionsPage";
 import Playlist from "./pages/Playlist";
+import ContactPage from "./pages/ContactPage";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "about", element: <AboutPage /> },
+      { path: "contact", element: <ContactPage /> },
       { path: "demo", element: <DemoPage /> },
       { path: "privacy-policy", element: <PrivacyPolicyPage /> },
       { path: "pinterest-select", element: <PinterestSelectionsPage /> },
