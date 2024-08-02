@@ -1,6 +1,7 @@
-import { Button, Center, Flex, Heading } from "@chakra-ui/react";
+import { Box, Button, Center, Flex, Heading, Image } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
+import starsBg from "../assets/stars_bg_transparent.png";
 
 const HomePage = () => {
   const redirectToPinterest = () => {
@@ -16,7 +17,8 @@ const HomePage = () => {
   };
 
   return (
-    <>
+    <Box>
+      <Image src={starsBg} pos="absolute" />
       <Heading
         textAlign="right"
         padding={20}
@@ -33,7 +35,7 @@ const HomePage = () => {
           Get Started
         </Button>
       </Center>
-    </>
+    </Box>
   );
 };
 export default HomePage;
