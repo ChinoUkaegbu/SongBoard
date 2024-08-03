@@ -109,7 +109,9 @@ const DemoPage = () => {
       ) : null}
 
       {songs ? (
-        <Heading fontSize="lg">{"Here's your new playlist :)"}</Heading>
+        <Heading paddingTop={2} paddingBottom={5} fontSize="lg">
+          {"Here's your new playlist :)"}
+        </Heading>
       ) : null}
       <VStack paddingLeft={2} paddingRight={2}>
         {songs?.map((song_duo) =>
