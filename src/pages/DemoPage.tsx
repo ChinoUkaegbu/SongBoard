@@ -1,4 +1,12 @@
-import { Input, Spinner, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Input,
+  Spinner,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useDemoLabels from "../hooks/useDemoLabels";
@@ -13,9 +21,8 @@ interface Song {
 
 const DemoPage = () => {
   const ref = useRef<HTMLInputElement>(null);
-
+  const [error, setError] = useState("");
   const { data, mutate, isLoading } = useDemoLabels();
-  const navigate = useNavigate();
 
   const [songs, setSongs] = useState<Song[][] | null>(null);
 
@@ -38,50 +45,73 @@ const DemoPage = () => {
     throttleRenderIframes(songs);
   }, [songs, throttleRenderIframes]);
 
+  // function to validate if the URL ends with an image file extension
+  const endsWithImageExtension = (url: string) => {
+    return /\.(jpg|jpeg|png|gif|bmp|webp)$/i.test(url);
+  };
+
+  // function to validate if the URL is a valid URL
+  const isValidUrl = (url: string) => {
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
   return (
-    <>
+    <Box padding={5}>
       <form
         onSubmit={(event) => {
           event.preventDefault();
           if (ref.current) {
-            const images = ref.current.value.split(" ");
-            mutate(images);
+            const imageUrls = ref.current.value
+              .split(" ")
+              .filter(Boolean)
+              .slice(0, 10);
+
+            for (const imageUrl of imageUrls) {
+              if (!isValidUrl(imageUrl)) {
+                setError("Invalid URL format");
+                return;
+              }
+              if (!endsWithImageExtension(imageUrl)) {
+                setError("URL does not point to an image");
+                return;
+              }
+            }
+
+            setError("");
+            ref.current.value = "";
+            console.log("Valid image URLs:", imageUrls);
+            mutate(imageUrls);
           }
-          // navigate("/");
         }}
       >
         <Input
           ref={ref}
           borderRadius={20}
-          placeholder="Insert files..."
+          placeholder="Insert image urls..."
           variant="filled"
+          required
         />
+        <Text paddingLeft={1} color="#ee2c2c">
+          {error}
+        </Text>
       </form>
-      <VStack padding={2}>
-        <iframe
-          style={{ borderRadius: "12px" }}
-          src="https://open.spotify.com/embed/track/2RiBogNRfulkNf7fVbPOrJ?utm_source=generator"
-          width="100%"
-          height="152"
-          frameBorder="0"
-          allowFullScreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
-        <iframe
-          style={{ borderRadius: "12px" }}
-          src="https://open.spotify.com/embed/track/59EPbYaZgU4qrQy1OwwhKt?utm_source=generator"
-          width="100%"
-          height="152"
-          frameBorder="0"
-          allowFullScreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
-      </VStack>
-      {isLoading ? <Spinner /> : null}
-      {songs ? <Text>{songs[0][0].song_name}</Text> : null}
-      <VStack padding={2}>
+
+      {isLoading ? (
+        <Flex>
+          <Text paddingRight={2}>Loading</Text>
+          <Spinner />
+        </Flex>
+      ) : null}
+
+      {songs ? (
+        <Heading fontSize="lg">{"Here's your new playlist :)"}</Heading>
+      ) : null}
+      <VStack paddingLeft={2} paddingRight={2}>
         {songs?.map((song_duo) =>
           song_duo?.map((song) => (
             <iframe
@@ -103,7 +133,7 @@ const DemoPage = () => {
           ))
         )}
       </VStack>
-    </>
+    </Box>
   );
 };
 
