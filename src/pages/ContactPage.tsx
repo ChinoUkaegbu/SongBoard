@@ -92,7 +92,7 @@ const ContactPage = () => {
             </FormControl>
           </Stack>
           <Button marginTop={7} colorScheme="blackAlpha" type="submit">
-            Submit Form
+            Submit
           </Button>
         </form>
         <Text fontSize="xs">{response}</Text>
