@@ -84,7 +84,7 @@ const DemoPage = () => {
 
             setError("");
             ref.current.value = "";
-            console.log("Valid image URLs:", imageUrls);
+            // console.log("Valid image URLs:", imageUrls);
             mutate(imageUrls);
           }
         }}

@@ -30,11 +30,11 @@ const ContactPage = () => {
       subject: "New Contact Message from your Website",
     },
     onSuccess: (message, data) => {
-      console.log(message);
+      // console.log(message);
       setResponse(message);
     },
     onError: (message, data) => {
-      console.log(message);
+      // console.log(message);
       setResponse(message);
     },
   });
