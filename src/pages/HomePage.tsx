@@ -1,7 +1,6 @@
-import { Box, Button, Center, Flex, Heading, Image } from "@chakra-ui/react";
-import NavBar from "../components/NavBar";
-import { Link } from "react-router-dom";
+import { Box, Button, Center, Heading, Image } from "@chakra-ui/react";
 import starsBg from "../assets/stars_bg_transparent.png";
+import { fadeInAnimation } from "../services/animations";
 
 const HomePage = () => {
   const redirectToPinterest = () => {
@@ -19,19 +18,25 @@ const HomePage = () => {
   return (
     <Box>
       <Image src={starsBg} pos="absolute" />
+
       <Heading
         textAlign="right"
         padding={20}
         paddingTop={10}
         paddingBottom={4}
         fontSize="8.5vw"
+        animation={fadeInAnimation}
       >
         find the playlist <br />
         that matches your <br />
         vibe
       </Heading>
       <Center>
-        <Button colorScheme="blackAlpha" onClick={redirectToPinterest}>
+        <Button
+          colorScheme="blackAlpha"
+          animation={fadeInAnimation}
+          onClick={redirectToPinterest}
+        >
           Get Started
         </Button>
       </Center>

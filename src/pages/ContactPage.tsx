@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import useWeb3Forms from "@web3forms/react";
 import contactUs from "../assets/contact_us.svg";
+import { fadeInAnimation } from "../services/animations";
 
 const ContactPage = () => {
   const [response, setResponse] = useState<String>("");
@@ -39,7 +40,7 @@ const ContactPage = () => {
   });
 
   return (
-    <HStack>
+    <HStack animation={fadeInAnimation}>
       <Image src={contactUs} />
       <Stack margin={5} flex="1">
         <Heading fontSize={25} paddingBottom={5}>
