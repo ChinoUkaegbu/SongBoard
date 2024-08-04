@@ -48,6 +48,10 @@
     </li>
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#usage">Usage</a></li>
+      <ul>
+        <li><a href="#pinterest-users">Pinterest Users</a></li>
+        <li><a href="#non-pinterest-users">Non-Pinterest Users</a></li>
+      </ul>
     <li><a href="#how-it-works">How it Works</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
