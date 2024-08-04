@@ -1,23 +1,7 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
 
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -42,7 +26,7 @@
     <a href="https://github.com/ChinoUkaegbu/SongBoard"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ChinoUkaegbu/SongBoard">View Demo</a>
+    <a href="https://songboard-front-end.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/ChinoUkaegbu/SongBoard/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -62,14 +46,9 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#how-it-works">How it Works</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -83,9 +62,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![SongBoard Screen Shot][product-screenshot]](https://songboard-front-end.vercel.app)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+🎵✨ We love to soundtrack our lives...or at least I do. A morning jog by the park with your favorite tunes keeping the rhythm of every step you take. An afternoon cafe run - slow jazz songs in the background amidst the clack of laptop keys. An evening beach trip with friends, synth-filled melodies flowing through the speakers. It feels like you can find a playlist for anything you can type into a search engine - but what if you don't have the words for it?
+
+With SongBoard, you can generate a playlist based on 'vibes' - specifically the vibes of your curated Pinterest boards. Each Pinterest board is a unique reflection of your interests, themes, and aesthetic choice _literally_ hand picked by you. Why not have a playlist that does the same?🎵✨ 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,61 +84,46 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+You can access the web application <a href="https://songboard-front-end.vercel.app/">here</a>. This repository manages the front end and the back end can be found <a href="https://github.com/ChinoUkaegbu/songboard-back-end">here</a>.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+### Pinterest Users
+If you have a Pinterest account with boards, simply click on the Get Started button on the homepage. 
+* **Connect & Sync:** Link your Pinterest account to SongBoard effortlessly.
+* **Discover & Inspire:** Choose any board filled with your favorite pins and let our app analyze the images.
+* **Play & Enjoy:** Receive a curated playlist that matches the mood, theme, and vibe of your board.
+  
+_The songs are embedded from Spotify's API meaning you can save the songs to your account as well!_  
+<br />
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Non-Pinterest Users
+Still want to try out SongBoard but don't have a Pinterest account? Navigate to the <a href="https://songboard-front-end.vercel.app/demo">Demo</a> page of the website and type in the URLs of the images you want to base your playlist off of.
+#### Note
+* The URLs must be separated by spaces e.g. `https://image1.jpg https://image2.jpg`.
+* The URLs must point to valid images hosted on the web.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- TECHNICAL-ISH EXPLANATION -->
+## How it Works
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Save playlists to Spotify
+- [ ] Implement dark mode
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/ChinoUkaegbu/SongBoard/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,7 +159,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - chinoukaegbu@gmail.com
+Chino Ukaegbu - [@twitter_handle](https://twitter.com/twitter_handle) - chinoukaegbu@gmail.com
 
 Project Link: [https://github.com/ChinoUkaegbu/SongBoard](https://github.com/ChinoUkaegbu/SongBoard)
 
@@ -204,9 +170,8 @@ Project Link: [https://github.com/ChinoUkaegbu/SongBoard](https://github.com/Chi
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Chidinma Ukaegbu]() - for being the first app tester (and the best sister ever)
+* My Twitter oomfs - for letting me yap whenever I ran into an error
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -226,7 +191,7 @@ Project Link: [https://github.com/ChinoUkaegbu/SongBoard](https://github.com/Chi
 [license-url]: https://github.com/ChinoUkaegbu/SongBoard/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: assets_readme/home_page_1.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Node.js]: https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
