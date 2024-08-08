@@ -174,7 +174,7 @@ Project Link: [https://github.com/ChinoUkaegbu/SongBoard](https://github.com/Chi
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Chidinma Ukaegbu]() - for being the first app tester (and the best sister ever)
+* [Chidinma Ukaegbu](https://www.behance.net/chidinma-designer) - for being the first app tester (and the best sister ever)
 * My Twitter oomfs - for letting me yap whenever I ran into an error
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -194,7 +194,7 @@ Project Link: [https://github.com/ChinoUkaegbu/SongBoard](https://github.com/Chi
 [license-shield]: https://img.shields.io/github/license/ChinoUkaegbu/SongBoard.svg?style=for-the-badge
 [license-url]: https://github.com/ChinoUkaegbu/SongBoard/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/chinonyerem-ukaegbu
 [product-screenshot]: assets_readme/home_page_1.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
