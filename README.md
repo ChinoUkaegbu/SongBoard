@@ -126,6 +126,7 @@ Still want to try out SongBoard but don't have a Pinterest account? Navigate to 
 
 - [ ] Save playlists to Spotify
 - [ ] Implement dark mode
+- [ ] Refactor code to have more modular components
 
 See the [open issues](https://github.com/ChinoUkaegbu/SongBoard/issues) for a full list of proposed features (and known issues).
 
