@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a bug or issue with the project
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: ""
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Describe the bug
+        A clear and concise description of what the bug is.
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the steps to reproduce the issue.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: input
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen instead.
+
+  - type: input
+    id: actual_behavior
+    attributes:
+      label: Actual behavior
+      description: What actually happened.
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        Provide information about your environment:
+        - OS: [e.g., Windows, macOS, Linux]
+        - Browser [e.g., Chrome, Firefox, Safari]
+        - Version [e.g., 22]
+      placeholder: "OS: macOS, Browser: Chrome, Version: 96"
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add any other context or relevant information about the issue.
